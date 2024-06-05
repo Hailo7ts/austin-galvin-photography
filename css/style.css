@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+p,
+span,
+li,
+.hero h5{
+  font-family: 'DM Sans', sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Hero */
+.hero,
+.quote,
+.city,
+.cv,
+.contact{
+  height: 650px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #b4becb;
+}
+
+.hero .container{
+  justify-content: center;
+}
+
+.hero h1,
+.hero h5{
+  height: 200px;
+  width: 40%;
+  align-content: flex-end;
+  margin: 5px;
+}
+
+.hero h1{
+  font-size: 80px;
+  font-family: 'Abril Fatface', sans-serif;
+}
+
+.hero h5{
+  font-size: 18px;
+}
+
+.hero .container img{
+  float: left;
+  height: 300px;
+  width: 99%;
+  object-fit: cover;
+}
+
+/* About Me */
+
+.about-me{
+  height: 650px;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #b4becb;
+}
+
+.about-me p{
+  font-size: 15px;
+}
+
+.about-me h2{
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+.about-me .container img{
+  width: 100%;
+}
+
+
+/* Quote */
+.quote h5{
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 50px;
+  width: 90%;
+}
+
+.quote span{
+  font-size: 18px;
+}
+
+.quote .container img{
+  width: 100%;
+}
+
+/* City */
+.city .container section{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.city h6{
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 21px;
+}
+
+.city span{
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.city .container img{
+  width: 100%;
+}
+
+/* CV */
+.cv .container h2{
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 50px;
+  margin-bottom: 100px;
+}
+
+.cv .container h3{
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 18px;
+  margin: 20px 5px 5px 0;
+}
+
+.cv .grid img{
+  width: 100%;
+}
+
+
+/*Get In Touch*/
+.contact{
+  border-bottom: 0;
+}
+
+.contact h2{
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 58px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact span{
+  font-size: 18px;
+}
+
+.contact .container img{
+  width: 100%;
+}
+
+.contact .grid img{
+  float: left;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* Tablet and under*/
+@media (max-width:768px){
+  .grid,
+  .grid-3,
+  .hero .grid,
+  .quote .grid,
+  .about-me .grid,
+  .city .grid,
+  .contact .grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .cv .flex{
+    flex-direction: column;
+  }
+
+  .hero,
+  .quote,
+  .about-me,
+  .city,
+  .cv,
+  .contact{
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .hero h1,
+  .hero h5,
+  .about-me h2,
+  .about-me p,
+  .quote h5,
+  .cv .container h2,
+  .contact span{
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  .city .container *:nth-child(3){
+    grid-row: 1;
+    text-align: center;
+  }
+
+  .hero .container h5,
+  .hero .container h1{
+    height: 100px;
+    padding-bottom: 40px;
+  }
+}
+
+/* Phone */
+@media(max-width:500px){
+  .quote{
+    display: none;
+  }
+
+  .contact .container section:first-child {
+    display: none;
+  }
+  .contact h2,
+  .contact span{
+    padding-bottom: 20px;
+
+  }
+
+}
